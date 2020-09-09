@@ -20,10 +20,13 @@ export class AppComponent {
       }
       keyDownFunction(event) {
         if (event.keyCode === 13) {
-          alert('you just pressed the enter key');
+          //alert('you just pressed the enter key');
           // rest of your code
           //this.addTodo(todo);
+          //$("#GFG_Button").click(); 
           event.preventDefault();
+          let element: HTMLElement = document.getElementById('addBtn') as HTMLElement;
+          element.click();
         }
       }
 }
