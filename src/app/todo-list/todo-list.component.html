@@ -1,4 +1,6 @@
 
 <div class="container" role="listitem">
-    <li *ngFor="let todo of todoArray">{{todo}} <i (click)="deleteItem(todo)" class="material-icons">delete</i></li>
+    <table class="table table-striped">
+    <tr *ngFor="let todo of todoArray"><td>{{todo}} </td><td><i (click)="deleteItem(todo)" class="material-icons">delete</i></td></tr>
+    </table>
 </div>
