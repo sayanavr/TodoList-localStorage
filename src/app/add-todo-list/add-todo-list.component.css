@@ -35,11 +35,11 @@ form{
         border-radius: 50%;    
         width: 5em;    
         height: 5em;    
-        padding: 1em 23px;    
+        padding: 2em 15px;   
         color: #fff;    
         position: absolute;    
         right: 13px;    
-        top: 50px;    
+        top: 59px;    
         cursor: pointer;}
         form .input-group-text i{    
             font-size: 2em;}
