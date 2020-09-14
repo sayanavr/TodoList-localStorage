@@ -4,4 +4,5 @@
 }
 .header{
     background-image: radial-gradient(#DCEEF2,white);
+    display: flex;
 }
