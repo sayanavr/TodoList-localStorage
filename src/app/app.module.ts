@@ -8,6 +8,8 @@ import { AddTodoListComponent } from './add-todo-list/add-todo-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
+
+import {DataService} from './services/data.service'
 const appRoutes: Routes=[
   {path:'',component:HomeComponent},
   {path:'addTodo',component:AddTodoListComponent},
@@ -26,7 +28,8 @@ const appRoutes: Routes=[
     AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AppComponent],
+  providers: [AppComponent,
+              DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

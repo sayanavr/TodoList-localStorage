@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import {AppComponent} from '../app.component';
+import {DataService} from '../services/data.service';
 @Component({
   selector: 'app-add-todo-list',
   templateUrl: './add-todo-list.component.html',
   styleUrls: ['./add-todo-list.component.css']
 })
 export class AddTodoListComponent implements OnInit {
-
-  constructor(public myapp: AppComponent) { }
+  todoArray=[];
+  constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
+    this.todoArray=this.dataService.getTodoList();
   }
-  todoArray=this.myapp.getTodoList();
   addTodo(value){    
     if(value==""){
       //setTimeout(function() {
@@ -20,7 +20,7 @@ export class AddTodoListComponent implements OnInit {
     }
     else{
       this.todoArray.push(value);  
-      this.myapp.setTodoList(this.todoArray);
+      this.dataService.setTodoList(this.todoArray);
       alert(value+' has been inserted!');
     }
     }

@@ -7,12 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  todoArray=[];
-  
-      getTodoList(){
-        return this.todoArray;
-      }
-      setTodoList(newtodoArr){
-        this.todoArray=newtodoArr;
-      }
 }

@@ -1,6 +1,7 @@
 
-<div class="container" role="listitem">
+<div *ngIf="todoArray.length>0;else noUsers" class="container" role="listitem">
     <table class="table table-striped">
     <tr *ngFor="let todo of todoArray"><td>{{todo}} </td><td><i (click)="deleteItem(todo)" class="material-icons">delete</i></td></tr>
     </table>
 </div>
+<ng-template #noUsers><h6>Nothing in the list!</h6></ng-template>
