@@ -3,6 +3,11 @@
     height: 100px;
 }
 .header{
-    background-image: radial-gradient(#DCEEF2,white);
     display: flex;
+}
+nav{
+    background-color: #EE6E00;;
+}
+.tabs .tab a {
+    color: #EE6E00;
 }
