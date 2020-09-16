@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-todo-list',
@@ -7,6 +7,10 @@ import { DataService } from '../services/data.service';
 })
 export class TodoListComponent implements OnInit {
   todoArray=[];
+  enableEdit=false;
+  currentTodoItem='';
+  newText='';
+  // @Input() currentTodoItem: string;
   constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
@@ -20,4 +24,18 @@ export class TodoListComponent implements OnInit {
       }  
       this.dataService.setTodoList(this.todoArray);
     }
+  editItem(todo){
+    this.enableEdit=true;
+    this.currentTodoItem=todo;
+    this.newText=todo;
+  }
+  editCurrentItem(){
+    for(let i=0 ;i<= this.todoArray.length ;i++){
+      if(this.currentTodoItem== this.todoArray[i]){ 
+         this.todoArray.splice(i,1)    
+       }   
+     }
+    this.todoArray.unshift(this.newText);
+    this.dataService.setTodoList(this.todoArray);
+  }
 }

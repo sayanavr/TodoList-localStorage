@@ -1,7 +1,18 @@
 
 <div *ngIf="todoArray.length>0;else noUsers" class="container" role="listitem">
     <table class="table table-striped">
-    <tr *ngFor="let todo of todoArray"><td>{{todo}} </td><td><i (click)="deleteItem(todo)" class="material-icons">delete</i></td></tr>
+    <tr *ngIf="enableEdit">Please edit here:
+            <input type="text" [value]="currentTodoItem" [(ngModel)]="newText">
+            <i (click)="editCurrentItem()" class="material-icons">save</i>
+            <i (click)="enableEdit=false" class="material-icons">cancel</i>
+    </tr>
+    <tr *ngFor="let todo of todoArray">
+        <td>{{todo}} </td>
+        <td>
+            <i (click)="editItem(todo)" class="material-icons">edit</i>
+            <i (click)="deleteItem(todo)" class="material-icons">delete</i>
+        </td>
+    </tr>
     </table>
 </div>
 <ng-template #noUsers><h6>Nothing in the list!</h6></ng-template>
