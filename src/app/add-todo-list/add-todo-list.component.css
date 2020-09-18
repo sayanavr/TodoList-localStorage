@@ -9,7 +9,7 @@ form{
 }
     form h1{    
         font-family: "Raleway";    
-        color:#F97300; 
+        color:#4DD0E1; 
     }
     form input[type=text]::placeholder{   
         font-family: "Raleway";   
@@ -19,7 +19,7 @@ form{
     }
     form .data li{ 
         background: #fff;
-        border-left: 4px solid #F97300;
+        border-left: 4px solid #4DD0E1;
         padding: 1em; 
         margin: 1em auto; 
         color: #666; 
@@ -31,7 +31,7 @@ form{
         cursor: pointer;
     }
     form .input-group-text{    
-        background: #F97300;    
+        background: #4DD0E1;    
         border-radius: 50%;    
         width: 5em;    
         height: 5em;    

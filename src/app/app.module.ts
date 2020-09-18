@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgxSocialShareModule } from 'ngx-social-share';
@@ -29,6 +30,7 @@ const appRoutes: Routes=[
   ],
   imports: [
     BrowserModule,
+    LayoutModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
