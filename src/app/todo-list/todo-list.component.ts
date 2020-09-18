@@ -10,6 +10,7 @@ export class TodoListComponent implements OnInit {
   enableEdit=false;
   currentTodoItem='';
   newText='';
+  todoList:string;
   // @Input() currentTodoItem: string;
   constructor(private dataService:DataService) { }
 
