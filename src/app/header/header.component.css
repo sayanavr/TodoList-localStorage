@@ -7,9 +7,20 @@
 }
 nav{
     background-color: #0097A7;
+    margin-bottom: 0px !important;
 }
 .tabs .tab a {
     color: #00BCD4;
+    background-color: #b2ebf256
+}
+
+.tabs .tab a:hover{
+    background-color: #00bbd41f;
+    outline: solid;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: #4dd0e156;
+    outline: none;
 }
 /* Style all font awesome icons */
 .fa {
