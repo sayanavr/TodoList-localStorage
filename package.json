@@ -25,6 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "font-awesome": "^4.7.0",
     "http": "0.0.1-security",
+    "material-design-icons": "^3.0.1",
     "materialize-css": "^1.0.0-rc.2",
     "ngx-social-share": "^1.0.0",
     "rxjs": "~6.6.0",
