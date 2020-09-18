@@ -1,15 +1,15 @@
 .to-do-img{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 .header{
     display: flex;
 }
 nav{
-    background-color: #EE6E00;;
+    background-color: #0097A7;;
 }
 .tabs .tab a {
-    color: #EE6E00;
+    color: #00BCD4;
 }
 /* Style all font awesome icons */
 .fa {
